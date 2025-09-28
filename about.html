@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Oracle</title>
+    <link rel="stylesheet" href="Resources/Style_files/about.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+   <nav class="navbar">
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="weapons.html">Weapons</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="game_md.html">Game Modes</a></li>
+
+      <li class="dropdown-parent">
+        <a href="loadouts.html">Loadouts</a>
+        <ul class="dropdown">
+          <li><a href="Assault.html">Assault Rifles</a></li>
+          <li><a href="SMGs.html">SMGs</a></li>
+          <li><a href="Sniper.html">Sniper Rifles</a></li>
+          <li><a href="Shotguns.html">Shotguns</a></li>
+          <li><a href="LMGs.html">LMGs</a></li>
+          <li><a href="Perks.html">Perks</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown-parent">
+        <a href="community.html">Community</a>
+        <ul class="dropdown">
+          <li><a href="Players.html">Players</a></li>
+          <li><a href="Reviews.html">Reviews</a></li>
+          <li><a href="tournament1.html">Tournaments</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="journal.html">War Journal</a>
+      </li>
+
+      <li><a href="join_us.html">join_us</a></li>
+    </ul>
+  </nav>
+</header>
+    <!-- Hero Section -->
+    <header class="about-hero">
+        <h1>About My Call of Duty Journey</h1>
+        <p>Get to know why I play, what drives me, and how gaming became part of me.</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="about-content">
+        <!-- Intro Section -->
+        <section class="intro">
+            <img src="Resources/Image_logs/Image 39.jpg" alt="Profile Picture">
+            <div>
+                <h2>Hello, I'm Oracle</h2>
+                <p>
+                    I'm Ekwenugo Albert Chukwuemeka, but in the Call of Duty community, I go by <strong>Oracle</strong>.  
+                    For me, gaming isn’t just a pastime — it’s a battleground where strategy, precision, and focus meet fun.  
+                    I’ve spent countless hours sharpening my skills, forming squads, and pushing through the chaos of every match.
+                </p>
+            </div>
+        </section>
+
+        <!-- Vision & Mission Accordion -->
+        <section class="vision-mission">
+            <h2>My Gaming Vision & Mission</h2>
+            <div class="accordion">
+
+                <div class="accordion-item">
+                    <button class="accordion-header">My Vision</button>
+                    <div class="accordion-content">
+                        <p>
+                            To rise as one of the most respected Call of Duty players, not only for my performance 
+                            but also for the community I build around teamwork, respect, and fair play.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">My Mission</button>
+                    <div class="accordion-content">
+                        <p>
+                            To master every weapon, map, and mode while inspiring other players to embrace strategy, 
+                            patience, and relentless improvement — whether in ranked matches or casual lobbies.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Skills Summary -->
+        <section class="skills-summary">
+            <h2>What I Do Best in COD</h2>
+            <ul>
+                <li>Deadly precision with Assault Rifles & Snipers</li>
+                <li>Fast reflexes in Search & Destroy matches</li>
+                <li>Strategic map control and team coordination</li>
+                <li>Breaking enemy streaks and clutching under pressure</li>
+            </ul>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="call-to-action">
+            <h2>Ready to Squad Up?</h2>
+            <p>
+                Whether it's ranked grind, custom tournaments, or just some fun public matches — 
+                I'm always ready for action. Let's dominate the battlefield together!
+            </p>
+            <a href="contact.html" class="cta-button">Contact Me</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Oracle. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Accordion Script -->
+    <script>
+        const headers = document.querySelectorAll(".accordion-header");
+        headers.forEach(header => {
+            header.addEventListener("click", () => {
+                const content = header.nextElementSibling;
+                content.classList.toggle("active");
+                header.classList.toggle("open");
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,208 @@
+/* Reset defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar wrapper */
+.navbar {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  padding: 0 20px;
+}
+
+.navbar li {
+  position: relative;
+}
+
+/* Top-level links */
+.navbar a {
+  display: block;
+  padding: 14px 10px;
+  text-decoration: none;
+  color: #111;
+  font-weight: 600;
+  font-size: 15px;
+  text-transform: uppercase;
+  transition: color 0.3s ease, background 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #000;
+  background: rgba(0,0,0,0.04);
+  border-radius: 4px;
+}
+
+/* Dropdown parent container */
+.dropdown-parent {
+  cursor: pointer;
+}
+
+/* Dropdown menu */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  min-width: 180px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.25s ease;
+  z-index: 10;
+}
+
+.dropdown li a {
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #222;
+  text-transform: none;
+}
+
+.dropdown li a:hover {
+  background: rgba(0,0,0,0.06);
+  color: #000;
+}
+
+/* Show dropdown only on hover */
+.dropdown-parent:hover > .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Optional: add subtle arrow */
+.dropdown-parent > a::after {
+  content: ' ▼';
+  font-size: 10px;
+  transition: transform 0.25s ease;
+}
+
+.dropdown-parent:hover > a::after {
+  transform: rotate(180deg);
+}
+
+/* Hero Section */
+.about-hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to right, #000, #333);
+    color: white;
+}
+
+/* Intro Section */
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    gap: 40px;
+}
+.intro img {
+    max-width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.intro p {
+    max-width: 500px;
+}
+
+/* Vision & Mission Accordion */
+.vision-mission {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.accordion-item {
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+    background: white;
+}
+.accordion-header {
+    width: 100%;
+    background: #222;
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    text-align: left;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s;
+}
+.accordion-header.open {
+    background: #444;
+}
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 15px;
+}
+.accordion-content.active {
+    max-height: 300px; /* enough space for your text */
+    padding: 15px;
+}
+
+/* Skills */
+.skills-summary {
+    text-align: center;
+    padding: 40px 20px;
+}
+.skills-summary ul {
+    list-style: none;
+    padding: 0;
+}
+.skills-summary li {
+    background: #fff;
+    padding: 10px;
+    margin: 5px auto;
+    max-width: 300px;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Call to Action */
+.call-to-action {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+.cta-button {
+    display: inline-block;
+    background: #ff6600;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+.cta-button:hover {
+    background: #e55a00;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    background: #111;
+    color: white;
+    padding: 15px;
+}

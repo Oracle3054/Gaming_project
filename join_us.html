@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Call of Duty Registration</title>
+  <link rel="stylesheet" href="Resources/Style_files/join_us.css">
+</head>
+<body>
+
+  <!-- HEADER / NAVIGATION -->
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="weapons.html">Weapons</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="game_md.html">Game Modes</a></li>
+        
+        <!-- Loadouts Dropdown -->
+        <li class="dropdown-parent">
+          <a href="loadouts.html">Loadouts</a>
+        </li>
+
+        <!-- Community Dropdown -->
+        <li class="dropdown-parent">
+          <a href="community.html">Community</a>
+        </li>
+
+        <li><a href="journal.html">War Journal</a></li>
+        <li><a href="join_us.html">Join Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- REGISTRATION SECTION -->
+  <main>
+    <section class="register-section">
+      <div class="register-card">
+        <h2>Create Your COD Profile</h2>
+        <p>Join the squad. Build your stats. Make your mark.</p>
+        
+        <form action="register.php" method="POST">
+          
+          <!-- GAMER TAG -->
+          <div class="form-group">
+            <label for="username">Gamer Tag</label>
+            <input type="text" id="username" name="username" placeholder="Enter your COD name" required>
+          </div>
+
+          <!-- EMAIL -->
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+
+          <!-- PLATFORM -->
+          <div class="form-group">
+            <label for="platform">Preferred Platform</label>
+            <select id="platform" name="platform" required>
+              <option value="">Select your platform</option>
+              <option value="pc">PC</option>
+              <option value="xbox">Xbox</option>
+              <option value="playstation">PlayStation</option>
+              <option value="mobile">Mobile</option>
+            </select>
+          </div>
+
+          <!-- PASSWORD -->
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Create password" required>
+          </div>
+
+          <!-- CONFIRM PASSWORD -->
+          <div class="form-group">
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm password" required>
+          </div>
+
+          <!-- SUBMIT -->
+          <button type="submit" class="btn-register">Register Now</button>
+        </form>
+        
+        <p class="login-link">
+          Already have an account? <a href="login.html">Login</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>

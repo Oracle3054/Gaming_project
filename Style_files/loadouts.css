@@ -1,0 +1,216 @@
+/* Reset some basic defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: #111111;
+}
+
+/* =====================
+   NAVBAR CONTAINER
+===================== */
+.navbar {
+  background-color: #fff;
+  border-bottom: 2px solid #000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar ul li {
+  position: relative; /* required for dropdown positioning */
+}
+
+/* =====================
+   NAVBAR LINKS
+===================== */
+.navbar ul li a {
+  display: block;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+  background-color: #000;
+  color: #fff;
+}
+
+/* =====================
+   DROPDOWN MENU
+===================== */
+.dropdown-parent .dropdown {
+  position: absolute;
+  top: 100%; /* places directly below parent */
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 0 0 6px 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  display: none; /* hide by default */
+  min-width: 200px;
+  z-index: 1000;
+  flex-direction: column;
+}
+
+.dropdown li a {
+  padding: 12px 16px;
+  font-weight: normal;
+  white-space: nowrap;
+}
+
+.dropdown li a:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Show dropdown only when hovering parent */
+.dropdown-parent:hover .dropdown {
+  display: flex;
+}
+
+/* Optional smooth dropdown animation */
+.dropdown-parent .dropdown {
+  opacity: 0;
+  transform: translateY(-5px);
+  transition: all 0.25s ease;
+}
+
+.dropdown-parent:hover .dropdown {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =====================
+   RESPONSIVE DESIGN
+===================== */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-wrap: wrap;
+  }
+  .navbar ul li a {
+    padding: 12px 14px;
+    font-size: 14px;
+  }
+}
+
+
+/* === DROPDOWN MENU === */
+.dropdown-parent:hover .dropdown {
+  display: block;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #111111;
+  min-width: 180px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.4);
+  z-index: 1000;
+}
+
+.dropdown li a {
+  padding: 0.7rem 1rem;
+}
+
+.dropdown li a:hover {
+  background: #333333;
+}
+
+/* === PAGE HEADER === */
+.page-header {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: #f5f5f5;
+  border-bottom: 2px solid #000;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-header p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* === LOADOUT SECTIONS === */
+.loadout-section {
+  padding: 3rem 2rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.loadout-section h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.loadout-section p {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* === WEAPON CARDS === */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.weapon-card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 280px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.weapon-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.weapon-card h3 {
+  font-size: 1.3rem;
+  margin: 0.8rem;
+}
+
+.weapon-card p {
+  font-size: 0.95rem;
+  color: #444;
+  margin: 0 0.8rem 1rem;
+}
+
+.weapon-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 18px rgba(0,0,0,0.2);
+}
+
+/* === FOOTER === */
+.site-footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #000000;
+  color: #ffffff;
+  font-size: 0.9rem;
+}
